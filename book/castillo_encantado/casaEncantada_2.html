@@ -5,9 +5,36 @@
 
 <body>
 <pre>
-archive-name: <a href="">listings.rand-usr.com</a>/<a href="">books</a>/haunted_house_2.basic
-found at: page 42
+archive-name: <a href="">listings.rand-usr.com</a>/<a href="">basic</a>/<a href="">books</a>/<a href="">casa_encantada</a>/<a href="">casa_encantada_2.bas</a>
+related files: <a href="">z80 snapshot</a> - <a href="">tap file</a>
 last-modified: jan 28, 2026
+
+----------------------------------- SOURCE ------------------------------------
+
+source original (not found)
+title: "write your own program" advanced graphics - haunted house
+genre: book
+publisher: aladdin books ltd.
+author: marcus milton
+year: 1985
+isbn: unknown
+
+source (spanish edition)
+title: aprende a programar: animacion
+genre: book
+publisher: e.g. anaya
+author: angel garcia garcia (trans.)
+year: 1986
+isbn: 84-7525-361-X
+
+found at: page 42
+listing: 2
+
+----------------------------------- NOTES -------------------------------------
+
+substitute any " AB" character for its corresponding user UDG key at lines: 530,540,1020,1030,1040,1050,1540,1560,4550,5600, except for lines 2590 and 6130 use system UDG key
+
+original listing typo: line 520 missing ":"
 
 ----------------------------------- START -------------------------------------
 
@@ -32,9 +59,7 @@ last-modified: jan 28, 2026
 170 STOP
 500 REM mucielago
 510 IF m<150 THEN LET xm=xm+1: GOTO 530
-520 LET m=m-8: LET a=m*PI/180:
-LET xm=16+INT (4.5*SIN (a)):
-LET ym=4+INT (3.5*COS (a))
+520 LET m=m-8: LET a=m*PI/180: LET xm=16+INT (4.5*SIN (a)): LET ym=4+INT (3.5*COS (a))
 530 PAPER 0: INK 7: PRINT AT ym,xm;"R": REM (R)
 535 PAUSE 3
 540 PRINT AT ym,xm;"S": REM (S)
@@ -192,32 +217,6 @@ LET ym=4+INT (3.5*COS (a))
 7520 DATA 119,35,16,252,193,16,246,201
 7530 REM datos posicion ventanas
 7540 DATA 10,22,8,23,14,19,14,12,10,9,8,8
-
------------------------------------ NOTES -------------------------------------
-
-substitute any " AB" character for its corresponding graphics mode UDG key at lines: 530,540,1020,1030,1040,1050,1540,2590,4550,5600, except for lines 2590 and 6130 use system UDG
-
-original listing typo: line 520 missing ":"
-
------------------------------------ SOURCE ------------------------------------
-
-source original (not found)
-title: "write your own program" advanced graphics - haunted house
-genre: book
-publisher: aladdin books ltd.
-author: marcus milton
-year: 1985
-isbn: unknown
-
-source (spanish edition)
-title: aprende a programar: animacion
-genre: book
-publisher: e.g. anaya
-author: angel garcia garcia (trans.)
-year: 1986
-isbn: 84-7525-361-X
-
-Archive-name: <a href="">listings.rand-usr.com</a>/<a href="">books</a>/haunted_house.basic
 </pre>
 
 </body>

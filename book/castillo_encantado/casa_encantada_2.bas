@@ -1,61 +1,80 @@
-<html>
-<head>
-<title>zx spectrum source listings archive - randomize usr</TITLE>
-</head>
+Check 2150A0C4
+Auto 8224
 
-<body>
-<pre>
-archive-name: <a href="">listings.rand-usr.com</a>/<a href="">books</a>/haunted_house_2.basic
-found at: page 42
-last-modified: jan 28, 2026
+# Run-time Variables
 
------------------------------------ START -------------------------------------
+Var n: Num = 6
+Var x1: Num = 101.7000006
+Var x2: Num = 50.6000003
+Var y1: Num = 48
+Var y2: Num = 88
+Var lad: Num = 100
+Var xs: Num = 179
+Var ys: Num = 159
+Var xm: Num = 14
+Var ym: Num = 7
+Var f: NumArray(2, 6) = 10, 8, 14, 14, 10, 8, 22, 23, 19, 12, 9, 8
+Var a: NumFOR = 7.8539816, 65527, 1, 6510, 2
+Var d: NumFOR = 31, 30, 1, 5580, 2
+Var i: NumFOR = 44, 23777, 1, 6530, 2
+Var r: NumFOR = 104, 103, 1, 2560, 2
+Var x: NumFOR = 175, 167, 8, 6120, 3
+Var y: NumFOR = 177, 169, 8, 6120, 2
+Var p: NumFOR = -1, 0, -2, 2100, 2
+Var m: NumFOR = 340, 100, 1, 3080, 2
+Var b: NumFOR = 30, 29, 1, 90, 2
+Var t: NumFOR = 7, 6, 1, 5560, 2
+Var w: NumFOR = 67, 66, 1, 4010, 3
+Var l: NumFOR = 6, 5, 1, 1510, 2
+Var g: NumFOR = 7, 6, 1, 5520, 2
+Var j: NumFOR = 7, 6, 1, 5590, 2
+Var s: NumFOR = 452, 450, 2, 6020, 2
 
-5 REM ******************
-10 REM casa encantada
-11 REM 18 bytes de codigo maquina almacenados en la linea 5
-20 GOSUB 6500: REM inicializar
-30 GOSUB 2000: REM fondo
-40 GOSUB 2500: REM castillo
-50 GOSUB 4500: REM arboles
-60 GOSUB 5000: REM oscuridad
-70 LET n=5: GOSUB 1500: REM rayo
-80 LET m=1300
-90 FOR b=0 TO 29
-100 GOSUB 500: REM murcielago
-110 GOSUB 1000: REM bruja
-120 if b=29 THEN PRINT AT 1,29;"   ": REM esp, esp, esp
-130 NEXT b
-140 LET n=5: GOSUB 1500: REM rayo
-150 GOSUB 5500: REM fuego
-160 GOSUB 6000: REM calavera
-170 STOP
-500 REM mucielago
-510 IF m<150 THEN LET xm=xm+1: GOTO 530
-520 LET m=m-8: LET a=m*PI/180:
-LET xm=16+INT (4.5*SIN (a)):
-LET ym=4+INT (3.5*COS (a))
-530 PAPER 0: INK 7: PRINT AT ym,xm;"R": REM (R)
-535 PAUSE 3
-540 PRINT AT ym,xm;"S": REM (S)
-545 PAUSE 3
-550 PRINT AT ym,xm;" ": REM esp
-560 RETURN
+# End Run-time Variables
+
+   5 REM >\#001!\#000X\#006\#024\#197\#006 w#\#016\#252\#193\#016\#246\#201
+  10 REM casa encantada
+  11 REM 18 bytes de codigo maquina almacenados en la linea 5
+  20 GO SUB 6500: REM inicializar
+  30 GO SUB 2000: REM fondo
+  40 GO SUB 2500: REM castillo
+  50 GO SUB 4500: REM arboles
+  60 GO SUB 5000: REM oscuridad
+  70 LET n=5: GO SUB 1500: REM rayo
+  80 LET m=1300
+  90 FOR b=0 TO 29
+ 100 GO SUB 500: REM murcielago
+ 110 GO SUB 1000: REM bruja
+ 120 IF b=29 THEN PRINT AT 1,29;"   ": REM esp, esp, esp
+ 130 NEXT b
+ 140 LET n=5: GO SUB 1500: REM rayo
+ 150 GO SUB 5500: REM fuego
+ 160 GO SUB 6000: REM calavera
+ 170 STOP
+ 500 REM mucielago
+ 510 IF m<150 THEN LET xm=xm+1: GO TO 530
+ 520 LET m=m-8: LET a=m*PI/180: LET xm=16+INT (4.5*SIN (a)): LET ym=4+INT (3.5*COS (a))
+ 530 PAPER 0: INK 7: PRINT AT ym,xm;"\r": REM (R)
+ 535 PAUSE 3
+ 540 PRINT AT ym,xm;"\s": REM (S)
+ 545 PAUSE 3
+ 550 PRINT AT ym,xm;" ": REM esp
+ 560 RETURN
 1000 REM bruja
 1010 PAPER 0: INK 7
-1020 PRINT AT 1,b;" IJ": GOSUB 500: REM esp,(I),(J)
-1030 PRINT AT 1,b;" KL": GOSUB 500: REM esp,(K),(L)
-1040 PRINT AT 1,b;" MN": GOSUB 500: REM esp,(M),(N)
-1050 PRINT AT 1,b;" OPQ": REM esp,(O),(P),(Q)
+1020 PRINT AT 1,b;" \i\j": GO SUB 500: REM esp,(I),(J)
+1030 PRINT AT 1,b;" \k\l": GO SUB 500: REM esp,(K),(L)
+1040 PRINT AT 1,b;" \m\n": GO SUB 500: REM esp,(M),(N)
+1050 PRINT AT 1,b;" \o\p\q": REM esp,(O),(P),(Q)
 1060 RETURN
 1500 REM rayo
 1510 FOR l=1 TO n
 1520 INK 0: PLOT 255,170: DRAW -39,-40: DRAW 10,0: DRAW -29,-40
 1530 POKE 23761,7: RANDOMIZE USR 23760
-1540 INK 6: PRINT AT 3,3;"G";AT 4,3 ;"H": REM (G);(H)
+1540 INK 6: PRINT AT 3,3;"\g";AT 4,3;"\h": REM (G);(H)
 1545 PAUSE 5
 1550 POKE 23761,1: RANDOMIZE USR 23760
-1560 INK 6: PRINT AT 3,3;"G";AT 4,3;"H": REM (G);(H)
+1560 INK 6: PRINT AT 3,3;"\g";AT 4,3;"\h": REM (G);(H)
 1570 INK 0: PLOT 255,170: DRAW -39,-40: DRAW 10,0: DRAW -29,-40
 1575 PAUSE 1
 1580 NEXT l
@@ -75,21 +94,21 @@ LET ym=4+INT (3.5*COS (a))
 2120 NEXT p
 2130 RETURN
 2500 REM castillo
-2510 LET x1=10: LET x2=21: LET y1=10: LET y2=16: LET lad=400: GOSUB 3000: REM bloque frontal
-2520 LET x1=8: LET x2=10: LET y1=6: LET y2=11: LET lad=100: GOSUB 3000: REM bloque torre izda.
-2530 LET x1=21: LET x2=23: LET y1=6: LET y2=11: LET lad=100: GOSUB 3000: REM bloque torre dcha.
-2540 LET xs=75: LET ys=159: GOSUB 3500: REM segmento tejado torre izda.
-2550 LET xs=179: LET ys=159: GOSUB 3500: REM segmento tejado torre dcha.
+2510 LET x1=10: LET x2=21: LET y1=10: LET y2=16: LET lad=400: GO SUB 3000: REM bloque frontal
+2520 LET x1=8: LET x2=10: LET y1=6: LET y2=11: LET lad=100: GO SUB 3000: REM bloque torre izda.
+2530 LET x1=21: LET x2=23: LET y1=6: LET y2=11: LET lad=100: GO SUB 3000: REM bloque torre dcha.
+2540 LET xs=75: LET ys=159: GO SUB 3500: REM segmento tejado torre izda.
+2550 LET xs=179: LET ys=159: GO SUB 3500: REM segmento tejado torre dcha.
 2560 FOR r=88 TO 103
 2570 PLOT 88,r: DRAW 79,0
 2580 NEXT r
-2590 FOR b=12 TO 20 STEP 2: PRINT AT 11,b;"8": NEXT b: REM (8)
-2600 LET x=68: LET y=102: GOSUB 4000
-2610 LET x=76: LET y=88: GOSUB 4000
-2620 LET x=182: LET y=102: GOSUB 4000
-2630 LET x=174: LET y=88: GOSUB 4000
-2640 LET x=96: LET y=56: GOSUB 4000
-2650 LET x=157: LET y=56: GOSUB 4000
+2590 FOR b=12 TO 20 STEP 2: PRINT AT 11,b;"\  ": NEXT b: REM (8)
+2600 LET x=68: LET y=102: GO SUB 4000
+2610 LET x=76: LET y=88: GO SUB 4000
+2620 LET x=182: LET y=102: GO SUB 4000
+2630 LET x=174: LET y=88: GO SUB 4000
+2640 LET x=96: LET y=56: GO SUB 4000
+2650 LET x=157: LET y=56: GO SUB 4000
 2660 PRINT AT 15,15;"88";AT 16,15;"88": REM (8),(8);(8),(8)
 2670 RETURN
 3000 REM bloque
@@ -119,14 +138,14 @@ LET ym=4+INT (3.5*COS (a))
 4510 PAPER 4: INK 0: OVER 1
 4520 FOR t=1 TO 30
 4530 LET x=INT (RND*29): LET y=13+INT (RND*7)
-4540 IF (x>8 AND x<22 AND y<17) THEN GOTO 4530
-4550 PRINT AT y,x;"AB";AT y+1,x;"CD";AT y+2,x;"EF": REM (A),(B);(C),(D);(E),(F)
+4540 IF (x>8 AND x<22 AND y<17) THEN GO TO 4530
+4550 PRINT AT y,x;"\a\b";AT y+1,x;"\c\d";AT y+2,x;"\e\f": REM (A),(B);(C),(D);(E),(F)
 4560 NEXT t
 4570 OVER 0: PAUSE 200
 4580 RETURN
 5000 REM oscuridad
 5010 POKE 23761,1: RANDOMIZE USR 23760
-5020 PAPER 0: INK 6: PRINT AT 3,3;"G";AT 4,3;"H": REM (G);(H)
+5020 PAPER 0: INK 6: PRINT AT 3,3;"\g";AT 4,3;"\h": REM (G);(H)
 5030 PAUSE 100
 5040 RETURN
 5500 REM fuego
@@ -139,7 +158,7 @@ LET ym=4+INT (3.5*COS (a))
 5570 LET n=n+1
 5580 FOR d=1 TO 30
 5590 FOR j=1 TO n
-5600 PRINT AT f(1,j),f(2,j);"T": REM (t)
+5600 PRINT AT f(1,j),f(2,j);"\t": REM (t)
 5610 PRINT AT f(1,j),f(2,j);" ": REM espacio
 5620 NEXT j: NEXT d: NEXT t
 5630 FOR y=2 TO 11: FOR x=7 TO 23
@@ -159,7 +178,7 @@ LET ym=4+INT (3.5*COS (a))
 6100 PRINT AT 8,15;"  ": REM espacio,espacio
 6110 PRINT AT 10,14;"   ": REM espacio,espacio,espacio
 6120 FOR y=81 TO 169 STEP 8: FOR x=87 TO 167 STEP 8
-6130 IF POINT (x,y)=1 THEN PAPER 0: INK INT (RND*(7))+1: FLASH 1: PRINT AT 22-y/8,x/8-1;"6": FLASH 0: REM (6)
+6130 IF POINT (x,y)=1 THEN PAPER 0: INK INT (RND*(7))+1: FLASH 1: PRINT AT 22-y/8,x/8-1;"\'.": FLASH 0: REM (6)
 6140 NEXT x: NEXT y
 6150 RETURN
 6500 REM inicializar
@@ -192,33 +211,3 @@ LET ym=4+INT (3.5*COS (a))
 7520 DATA 119,35,16,252,193,16,246,201
 7530 REM datos posicion ventanas
 7540 DATA 10,22,8,23,14,19,14,12,10,9,8,8
-
------------------------------------ NOTES -------------------------------------
-
-substitute any " AB" character for its corresponding graphics mode UDG key at lines: 530,540,1020,1030,1040,1050,1540,2590,4550,5600, except for lines 2590 and 6130 use system UDG
-
-original listing typo: line 520 missing ":"
-
------------------------------------ SOURCE ------------------------------------
-
-source original (not found)
-title: "write your own program" advanced graphics - haunted house
-genre: book
-publisher: aladdin books ltd.
-author: marcus milton
-year: 1985
-isbn: unknown
-
-source (spanish edition)
-title: aprende a programar: animacion
-genre: book
-publisher: e.g. anaya
-author: angel garcia garcia (trans.)
-year: 1986
-isbn: 84-7525-361-X
-
-Archive-name: <a href="">listings.rand-usr.com</a>/<a href="">books</a>/haunted_house.basic
-</pre>
-
-</body>
-</html>
